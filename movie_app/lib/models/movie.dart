@@ -1,17 +1,17 @@
 class Movie {
-  final String title;
-  final String thumbnailUrl;
-  final String release;
+  final String name;
+  final String images;
   final double rating;
+  final String totalTime;
 
-  Movie({this.title, this.thumbnailUrl, this.release, this.rating});
+  Movie({this.name, this.images, this.rating, this.totalTime});
 
   factory Movie.fromJson(dynamic json) {
     return Movie(
-        title: json['results']['title'] as String,
-        thumbnailUrl: json['results']['imageurl'][0] as String,
-        release: json['results']['released'] as String,
-        rating: json['results']['imdbrating'] as double);
+        name: json['name'] as String,
+        images: json['images'][0]['hostedLargeUrl'] as String,
+        rating: json['rating'] as double,
+        totalTime: json['totalTime'] as String);
   }
 
   static List<Movie> movieFromSnapshot(List snapshot) {
@@ -22,6 +22,6 @@ class Movie {
 
   @override
   String toString() {
-    return 'Movie {title: $title, images: $thumbnailUrl, release: $release, rating: $rating}';
+    return 'Movie {name: $name, images: $images, rating: $rating, totalTime: $totalTime}';
   }
 }

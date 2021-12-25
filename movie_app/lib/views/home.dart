@@ -46,10 +46,10 @@ class _HomePageState extends State<HomePage> {
                 itemCount: _movie.length,
                 itemBuilder: (context, index) {
                   return MovieCard(
-                      title: _movie[index].title,
+                      name: _movie[index].name,
+                      images: _movie[index].images,
                       rating: _movie[index].rating.toString(),
-                      thumbnailUrl: _movie[index].thumbnailUrl,
-                      released: _movie[index].release);
+                      totalTime: _movie[index].totalTime);
                 }));
   }
 }

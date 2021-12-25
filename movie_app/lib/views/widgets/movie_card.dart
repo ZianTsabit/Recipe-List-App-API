@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 class MovieCard extends StatelessWidget {
-  final String title;
+  final String name;
+  final String images;
   final String rating;
-  final String released;
-  final String thumbnailUrl;
+  final String totalTime;
   MovieCard({
-    @required this.title,
-    @required this.released,
+    @required this.name,
+    @required this.images,
     @required this.rating,
-    @required this.thumbnailUrl,
+    @required this.totalTime,
   });
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class MovieCard extends StatelessWidget {
             Colors.black.withOpacity(0.35),
             BlendMode.multiply,
           ),
-          image: NetworkImage(thumbnailUrl),
+          image: NetworkImage(images),
           fit: BoxFit.cover,
         ),
       ),
@@ -46,7 +46,7 @@ class MovieCard extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 5.0),
               child: Text(
-                title,
+                name,
                 style: TextStyle(
                   fontSize: 19,
                 ),
@@ -95,7 +95,7 @@ class MovieCard extends StatelessWidget {
                         size: 18,
                       ),
                       SizedBox(width: 7),
-                      Text(released),
+                      Text(totalTime),
                     ],
                   ),
                 )
