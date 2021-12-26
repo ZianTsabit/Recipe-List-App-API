@@ -1,2 +1,2 @@
 # Recipe-List-App-API
-Simple Movie List App using API
+Simple Recipe List App using API
