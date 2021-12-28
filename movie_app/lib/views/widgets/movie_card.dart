@@ -90,7 +90,7 @@ class MovieCard extends StatelessWidget {
                   child: Row(
                     children: [
                       Icon(
-                        Icons.calendar_today,
+                        Icons.timelapse,
                         color: Colors.yellow,
                         size: 18,
                       ),

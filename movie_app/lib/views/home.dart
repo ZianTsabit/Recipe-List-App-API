@@ -34,9 +34,9 @@ class _HomePageState extends State<HomePage> {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.movie),
+              Icon(Icons.food_bank),
               SizedBox(width: 10),
-              Text('Movie List')
+              Text('Recipe List')
             ],
           ),
         ),
